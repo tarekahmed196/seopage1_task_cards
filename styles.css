@@ -1,0 +1,38 @@
+.w-small{
+    height: 20px;
+    width: 20px;
+}
+
+
+  body {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    
+  }
+
+  /* Style for card layout */
+  .card-container {
+    white-space: nowrap; /* Prevent cards from wrapping to the next line */
+    overflow-x: auto; /* Enable horizontal scrolling for the card container */
+    padding: 10px; /* Add padding for better aesthetics */
+  }
+
+  .column {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    max-height: 600px; /* Set a maximum height for the column */
+    overflow-y: auto; /* Enable vertical scrolling for the column */
+    
+  }
+
+  .card {
+    width: 300px;
+    margin-bottom: 10px;
+    overflow-y: auto; /* Enable vertical scrolling for cards */
+    max-height: 250px; /* Set a maximum height for cards */
+  }
+
+  /* Add your modal styles here */
+  .modal-card {
+    /* Customize modal styles */
+  }

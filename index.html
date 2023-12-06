@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload and Modal</title>
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/1909742b6b.js" crossorigin="anonymous"></script>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <!-- Case 1: Horizontal and Vertical Scrollbar - Multiple Columns and Cards -->
+  <div class="container ">
+    <div class="card-container ">
+      <!-- Column 1 -->
+      <div class="column ">
+        <div class="d-flex justify-content-between justify-content-center px-2 z-3 ">
+            <p class="font-weight-bold "><i class="fa-solid fa-circle text-danger"></i> Incomplete</p>
+            <button class="border-0">0</button>
+        </div>
+        <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card-2  -->
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card-3  -->
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-4  -->
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-5  -->
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card-6  -->
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!-- Add more cards as needed -->
+      </div>
+
+      <!-- Column 2 -->
+      <div class="column">
+        <div class="d-flex justify-content-between justify-content-center px-2">
+            <p class="font-weight-bold"><i class="fa-solid fa-circle text-success"></i> To Do</p>
+            <button class="border-0">0</button>
+        </div>
+        <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-3  -->
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Add more cards as needed -->
+      </div>
+
+      <!-- Column 3 -->
+      <div class="column">
+        <div class="d-flex justify-content-between justify-content-center px-2">
+            <p class="font-weight-bold"><i class="fa-solid fa-circle text-warning"></i> Doing</p>
+            <button class="border-0">0</button>
+        </div>
+        <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Add more cards as needed -->
+      </div>
+
+      <!-- Column 4 -->
+      <div class="column">
+        <div class="d-flex justify-content-between justify-content-center px-2">
+            <p class="font-weight-bold"><i class="fa-solid fa-d text-success"></i> Under Review</p>
+            <button class="border-0">0</button>
+        </div>
+        <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Add more cards as needed -->
+      </div>
+
+      <!-- Column 5-->
+      <div class="column">
+        <div class="d-flex justify-content-between justify-content-center px-2">
+            <p class="font-weight-bold"><i class="fa-solid fa-d text-danger"></i> Completed</p>
+            <button class="border-0">0</button>
+        </div>
+        <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-1">
+            <!-- Card Content -->
+            <div class="d-flex justify-content-between">
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold">Client Name</small></span>
+                <span><img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt=""> <small class="font-weight-bold" >Sadik Istiak</small></span>
+                
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p>Lorem ipsum dolor</p>
+                <p><i class="fa-solid fa-box"></i>1/2</p>
+            </div>
+
+            <!-- Button to trigger the modal inside the card -->
+            <div class="d-flex justify-content-around align-content-center">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <img class="rounded-circle  w-small" src="https://i.ibb.co/L1qkMWW/passport-photo-cute-well-dressed-260nw-1816206689.webp" alt="">
+                <p><i class="fa-regular fa-comments"></i></p>
+                <p><small data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-paperclip"></i><span id="fileCount">0</span></small></p>
+                <small><i class="fa-solid fa-calendar-days"></i> 30-12-2022</small>
+            </div>
+            
+            <!-- Modal for File Upload -->
+            <div id="myModal" class="modal modal-card">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Upload Attachments</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <input type="file" id="fileInput" multiple />
+                    <ul id="fileList"></ul>
+                    <button id="uploadBtn" class="btn btn-success">Upload Files</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Add more cards as needed -->
+      </div>
+      
+      
+      
+      <!-- Add more columns as needed -->
+    </div>
+  </div>
+
+  <!-- Add Bootstrap JS and jQuery (if not already included) -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
